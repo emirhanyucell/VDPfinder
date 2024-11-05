@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>VDP Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            width: 270px;
+            padding: 20px;
+            background-color: #1e1e1e; /* Koyu arka plan */
+            color: #00ff99; /* Neon yeşil yazı */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 255, 153, 0.7);
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #00ff99; /* Başlık için neon yeşil */
+            text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99;
+            letter-spacing: 1px;
+        }
+
+        .status-box {
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+            margin-top: 15px;
+            border: 2px solid #00ff99; /* Genel durum kutusuna neon çerçeve */
+        }
+
+            .status-box.safe {
+                background-color: rgba(0, 255, 153, 0.1); /* Hafif yeşil arka plan */
+                color: #00ff99;
+                border-color: #00ff99;
+            }
+
+            .status-box.danger {
+                background-color: rgba(255, 0, 0, 0.1); /* Hafif kırmızı arka plan */
+                color: #ff0033; /* Tehlike için kırmızı renk */
+                border-color: #ff0033;
+                text-shadow: 0 0 5px #ff0033, 0 0 10px #ff0033;
+            }
+
+            .status-box.checking {
+                background-color: rgba(255, 255, 0, 0.1); /* Hafif sarı arka plan */
+                color: #ffff00; /* Kontrol rengi sarı */
+                border-color: #ffff00;
+                text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00;
+            }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #444; /* Soluk alt metin */
+        }
+
+            .footer a {
+                color: #00ff99;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                .footer a:hover {
+                    text-decoration: underline;
+                }
+
+        @media (max-width: 270px) {
+            body {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h3>VDP Finder</h3>
+  <div id="status" class="status-box safe">Looking For..</div>
+  <script src="script.js"></script>
+</body>
+</html>

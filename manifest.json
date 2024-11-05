@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "VDP Finder",
+  "version": "1.0",
+  "description": "It detects domains within the scope of VDP.",
+  "permissions": [
+    "storage",
+    "webRequest",
+    "activeTab"
+  ],
+  "background": {
+    "scripts": [ "script.js" ]
+  },
+  "browser_action": {
+    "default_popup": "script.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
